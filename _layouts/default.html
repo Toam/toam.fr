@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/font-awesome-ie7.css">
+  <link rel="stylesheet" href="/css/font-awesome.css">  
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+<body>
+  <header>
+    <a href="/"><h4 class="logo">Blog de Toam</h4></a>
+    <div class="menubutton"><i class="icon-reorder"></i></div>
+    <nav>
+      <ul>
+        <li><a href="{{site.url}}/archives/">Archives</a></li>
+        <li><a href="{{site.url}}/categories/">Catégories</a></li>
+        <li><a href="{{site.url}}/about/">À Propos</a></li>
+      </ul>
+    </nav>
+    <br class="clear" />
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <div class="slate">
+      <div class="four columns">
+        <h5>Suivez moi sur Twitter <a href="#">@toam</a></h5>
+        <div class="tweet"></div>
+      </div>
+      <div class="four columns">
+        <h5>À propos</h5>
+        <p>Je suis <a href="https://plus.google.com/113003762856677997874?rel=author">Thomas Brelet</a>, développeur actuellement en poste sur Marseille. Pour en savoir plus, <a href="http://thomas.brelet.net">c'est part ici</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="/javascript/jquery.tweet.js"></script>
+  <script src="/javascript/jquery.fitvids.js"></script>
+  <script src="/javascript/respond.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+  <script src="/javascript/script.js"></script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40702978-2', 'toam.fr');
+  ga('send', 'pageview');
+  </script>
+
+</body>
+</html>
+

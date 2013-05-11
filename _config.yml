@@ -1,0 +1,5 @@
+name: Blog de Toam
+pygments: true
+paginate: 5
+permalink: /:day-:month-:year-:title
+citation_category_name: "quote"

@@ -1,0 +1,59 @@
+---
+layout: default
+title: Blog de Toam
+---
+{% for post in paginator.posts %}
+
+{% if post.category == site.citation_category_name %}
+<section class="quote">
+	<p>
+		{{ post.title }}
+		<span class="author">{{ post.author }}</span>
+	</p>
+</section>
+{% else %}
+<section>
+	<div class="eight columns">
+		<h4 class="post_title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		<span class="post_date">{{ post.date | localize: ":short" }}</span>
+		<span class="post_tag"><i class="icon-tag"></i> <a href="/categories/">{{ post.category }}</a></span>
+		<p>{{ post.content | more: "excerpt" }}</p>
+		<a href="{{ post.url }}"><button class="float_right">Lire la suite</button></a>
+	</div>
+	<br class="clear" />
+</section>
+{% endif %}
+{% endfor %}
+
+<div class="pagination">
+	{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path }}">
+		<button class="light"><i class="icon-chevron-left"></i></button>
+	</a>
+	{% endif %}
+
+	{% if paginator.page == 1 %}
+	<button>1</button>
+	{% else %}
+	<a href="/">
+		<button class="light">1</button>
+	</a>
+	{% endif %}
+
+	{% for count in (2..paginator.total_pages) %}
+	{% if count == paginator.page %}
+	<button>{{ count }}</button>
+	{% else %}
+	<a href="/page{{ count }}">
+		<button class="light">{{ count }}</button>
+	</a>
+	{% endif %}
+	{% endfor %}
+
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path }}">
+		<button class="light"><i class="icon-chevron-right"></i></button>
+	</a>
+	{% endif %}
+
+</div>

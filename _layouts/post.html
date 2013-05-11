@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section>
+	<div class="eight columns">
+		<h4 class="post_title">{{ page.title }}</h4>
+		<span class="post_date">{{ page.date | localize: ":short" }}</span>
+		<span class="post_tag"><i class="icon-tag"></i> <a href="/categories/">{{ page.category }}</a></span>
+		{{ content }}
+		<hr/>
+	</div>
+
+	<div class="metadata">
+		<strong>Autres articles à découvrir également : </strong>
+		{% for post in site.related_posts %}
+		<span>
+			<i class="icon-arrow-right"></i>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</span>
+		{% endfor %}
+	</div>
+	
+	<hr/>
+
+	{% if page.comments %}
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'blogdetoam'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+    	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	{% endif %}
+
+    <br class="clear" />
+</section>
