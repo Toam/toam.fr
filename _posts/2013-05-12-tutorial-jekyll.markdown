@@ -9,30 +9,32 @@ Le but de ce tutoriel est de vous guider dans la mise en place d'un blog statiqu
 
 <!--more-->
 ##### Installation Jekyll
-La première étape est d'installer la gem Jekyll : 
+La première étape est d'installer la gem Jekyll. Cela suppose que **Ruby** et **RubyGems** soient installés sur votre système.
 {% highlight sh %}
 $ gem install jekyll
 {% endhighlight %}
 
-Il faut ensuite se placer dans le dossier où vous voulez créer votre blog avant de lancer la création :
+Il faut ensuite se placer dans le dossier où vous voulez créer votre blog avant de lancer la création.
 {% highlight sh %}
 $ jekyll new monblog
 $ cd monblog
 {% endhighlight %}
 
-Jekyll embarque le serveur WEBrick, il est donc possible de voir directement le blog grâce à la commande serve :
+Jekyll embarque le serveur WEBrick, il est donc possible de voir directement le blog grâce à la commande **serve**.
 {% highlight sh %}
 $ jekyll serve
 {% endhighlight %}
 
-Le blog est visible à cette adresse : http://localhost:4000
+Le blog est alors visible à cette adresse : http://localhost:4000
 
-La commande serve propose une option intéressante, "watch", qui permet de mettre à jour automatiquement le blog pendant le développement. Dès qu'un fichier est modifié (par exemple le contenu d'un article de blog), les pages correspondantes sont re-générées.
+La commande **serve** propose une option intéressante, **watch** qui permet de mettre à jour automatiquement le blog pendant le développement. Dès qu'un fichier est modifié (par exemple le contenu d'un article de blog), les pages correspondantes sont re-générées.
 {% highlight sh %}
 $ jekyll serve -w
 {% endhighlight %}
 
 ##### Création des pages et des articles
+
+##### Permaliens
 
 ##### Localiser Jekyll
 
@@ -44,8 +46,7 @@ $ jekyll serve -w
 
 ##### Commentaires avec Disqus
 
-##### Automatiser le deployement vers un FTP
+##### Automatiser le déploiement vers un FTP
 
-##### Test sur Amazon S3
-
-##### Quelques benchmarks
+##### Benchmarks et tests sur Amazon S3
+Quelques chiffres pour conclure. 
