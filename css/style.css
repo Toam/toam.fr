@@ -92,7 +92,6 @@ li {
 
 a, a:visited {
     color: #000;
-    text-decoration: none;
     -webkit-transition:color .25s ease-in-out;
     -moz-transition:color .25s ease-in-out;
     -o-transition:color .25s ease-in-out;
