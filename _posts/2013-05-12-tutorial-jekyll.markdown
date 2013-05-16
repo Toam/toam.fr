@@ -38,6 +38,8 @@ $ jekyll serve -w
 
 ##### Permaliens
 
+Plus d'info sur les permaliens, avec tous les formats possible [sur cette page].
+
 ##### Localiser Jekyll
 Il existe plusieurs solutions pour localiser Jenkins. Il est par exemple possible d'utiliser le plugin [i18n_filter](https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb). Le principe est d'utilier les fichiers de traduction de la gem [rails-i18n](https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale) et de les copiers dans le dossier **\_locales** à la racine du projet.
 
