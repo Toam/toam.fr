@@ -96,6 +96,11 @@ a, a:visited {
     -moz-transition:color .25s ease-in-out;
     -o-transition:color .25s ease-in-out;
     transition:color .25s ease-in-out;
+    text-decoration: none;
+}
+
+p a {
+    text-decoration: underline;
 }
 
 a:hover {
