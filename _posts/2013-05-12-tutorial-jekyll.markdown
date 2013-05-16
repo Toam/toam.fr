@@ -55,9 +55,44 @@ Le code suivant permet d'afficher la date de publication d'un article sous la fo
 ==> Affiche : "10 Mars 2013"
 {% endhighlight %}
 
-##### Mise en place de la pagination
+##### Mise en place de la pagination sur la page d'accueil
+La page d'acceuil listant tous les articles n'est pas paginé. Pourtant Jekyll embarque cette fonctionnalité par défault. Pour en profiter, il faut ajouter un paramètre dans le fichier **_config.yml**
+{% highlight ruby %}
+paginate: 5
+{% endhighlight %}
 
+La page d'acceuil boucle sur les postes du site (**site.posts**), il faut maintenant boucler sur la liste paginé des postes (**paginator.posts**).
 
+Pour afficher la navigation, par exemple sur la page d'accueil, il faut ensuite ajouter le code suivant :
+{% highlight ruby %}
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date }}</span>
+  </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+{% endfor %}
+{% endhighlight %}
+
+Il est ensuite très simple d'ajouter une navigation entre les pages. Le code suivant affiche un bouton précédent et un bouton suivant.
+{% highlight ruby %}
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{ paginator.previous_page }}" class="previous">Page précédente</a>
+  {% else %}
+    <span class="previous">Page précédente</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="next">Page suivante</a>
+  {% else %}
+    <span class="next ">Page suivante</span>
+  {% endif %}
+</div>
+{% endhighlight %}
 
 ##### Création d'un sitemap
 Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **_plugin** à la racine du projet.
