@@ -69,6 +69,8 @@ EXCLUDED_FILES = ["atom.xml"]
 PAGES_INCLUDE_POSTS = ["index.html"]
 {% endhighlight %}
 
+Suite à une nouvelle génération du blog, un fichier **sitemap.xml** devrait se trouver à dans le répertoire **_site**.
+
 ##### Commentaires avec Disqus
 Un blog statique ne permet pas directement de mettre en place un système de commentaire, mais il existe une solution ! Disqus est un service qui permet aux visiteurs de participer dans les articles simplement depuis quelques lignes de Javascript. Le service fonctionne parfaitement sous Jenkyll et propose même une [page d'aide pour vous aider dans l'intégration](http://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
