@@ -117,7 +117,7 @@ Suite à une nouvelle génération du blog, un fichier **sitemap.xml** devrait s
 ##### Commentaires avec Disqus
 Un blog statique ne permet pas directement de mettre en place un système de commentaire, mais il existe une solution ! Disqus est un service qui permet aux visiteurs de participer dans les articles simplement depuis quelques lignes de Javascript. Le service fonctionne parfaitement sous Jenkyll et propose même une [page d'aide pour vous aider dans l'intégration](http://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
-La cerise sur le gateau, Disqus est gratuit pour un petit blog. L'outils est disponible en Français, il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
+La cerise sur le gateau, Disqus est gratuit pour un petit blog et l'outils est disponible en Français. Il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
 
 ##### Automatiser le déploiement vers un FTP
 Il existe plusieurs solutions pour envoyer le site généré sur un FTP. [Glynn](https://github.com/dmathieu/glynn) est distribué sous la forme d'une gem et fonctionne parfaitement.
@@ -135,8 +135,13 @@ Générer le blog et le déployer est alors un jeu d'enfant, il suffit de se pla
 glynn
 {% endhighlight %}
 
-##### Benchmarks et tests sur Amazon S3
+Félicitation, votre blog est en ligne !
+
+##### Benchmarks
 Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce blog était précedement un blog Wordpress placé sur un hébergement OVH Mutualisé. Il n'y avait aucune optimisation particulière (pas de cache, un theme peu optimisé, ...)
 
 
-Il est encore possible de faire mieux avec ce blog, nottement au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
+Il est encore possible de faire mieux avec ce blog statique, nottement au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
+
+##### Conclusion
+Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement destiné aux developpeurs . 
