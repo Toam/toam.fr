@@ -78,7 +78,6 @@ Pour afficher la navigation, par exemple sur la page d'accueil, il faut ensuite 
 
 Il est ensuite très simple d'ajouter une navigation entre les pages. Le code suivant affiche un bouton précédent et un bouton suivant.
 {% highlight ruby %}
-<!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="/page{{ paginator.previous_page }}" class="previous">Page précédente</a>
@@ -95,21 +94,14 @@ Il est ensuite très simple d'ajouter une navigation entre les pages. Le code su
 {% endhighlight %}
 
 ##### Création d'un sitemap
-Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **_plugin** à la racine du projet.
+Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **\_plugin** à la racine du projet.
 
 La configuration du plugin est très simple, elle se fait au début du fichier.
 {% highlight ruby %}
-# URL du blog
-MY_URL = "http://www.monsite.com"
-
-# Nom du fichier Sitemap
-SITEMAP_FILE_NAME = "sitemap.xml"
-
-# Fichiers à exclure
-EXCLUDED_FILES = ["atom.xml"]
-
-# Pages à inclure
-PAGES_INCLUDE_POSTS = ["index.html"]
+MY_URL = "http://www.monsite.com" # URL du blog
+SITEMAP_FILE_NAME = "sitemap.xml" # Nom du fichier Sitemap
+EXCLUDED_FILES = ["atom.xml"] # Fichiers à exclure
+PAGES_INCLUDE_POSTS = ["index.html"] # Pages à inclure
 {% endhighlight %}
 
 Suite à une nouvelle génération du blog, un fichier **sitemap.xml** devrait se trouver à dans le répertoire **_site**.
@@ -130,9 +122,9 @@ ftp_dir: /repertoireDeDestination
 ftp_passive: false
 {% endhighlight %}
 
-Générer le blog et le déployer est alors un jeu d'enfant, il suffit de se placer à la racine du projet et de taper la commande **glynn**.
-{% highlight ruby %}
-glynn
+Générer le blog et le déployer est alors un jeu d'enfant, il suffit de se placer à la racine du projet et de simplement taper la commande :
+{% highlight sh %}
+$ glynn
 {% endhighlight %}
 
 Félicitation, votre blog est en ligne !
