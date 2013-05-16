@@ -1,8 +1,10 @@
 ---
+published: true
 layout: post
-title:  "Tutoriel : Créer un blog statique avec Jekyll"
+title: "Tutoriel : Créer un blog statique avec Jekyll"
 category: jekyll
 comments: true
+
 ---
 
 Le but de ce tutoriel est de vous guider dans la mise en place d'un blog statique grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de caches, tout est ici caché par définition. Il y a deux avantages a avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi auncun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
@@ -50,6 +52,22 @@ Le code suivant permet d'afficher la date de publication d'un article sous la fo
 ##### Réaliser une page d'archives
 
 ##### Création d'un sitemap
+Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **_plugin** à la racine du projet.
+
+La configuration du plugin est très simple, elle se fait au début du fichier.
+{% highlight ruby %}
+# URL du blog
+MY_URL = "http://www.monsite.com"
+
+# Nom du fichier Sitemap
+SITEMAP_FILE_NAME = "sitemap.xml"
+
+# Fichiers à exclure
+EXCLUDED_FILES = ["atom.xml"]
+
+# Pages à inclure
+PAGES_INCLUDE_POSTS = ["index.html"]
+{% endhighlight %}
 
 ##### Commentaires avec Disqus
 Un blog statique ne permet pas directement de mettre en place un système de commentaire, mais il existe une solution ! Disqus est un service qui permet aux visiteurs de participer dans les articles simplement depuis quelques lignes de Javascript. Le service fonctionne parfaitement sous Jenkyll et propose même une [page d'aide pour vous aider dans l'intégration](http://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
