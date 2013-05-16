@@ -34,6 +34,8 @@ La commande **serve** propose une option intéressante, **watch** qui permet de 
 $ jekyll serve -w
 {% endhighlight %}
 
+##### Personalisation du template
+
 ##### Création d'articles
 
 ##### Création de pages
@@ -53,9 +55,9 @@ Le code suivant permet d'afficher la date de publication d'un article sous la fo
 ==> Affiche : "10 Mars 2013"
 {% endhighlight %}
 
-##### Réaliser une page de catégories
+##### Mise en place de la pagination
 
-##### Réaliser une page d'archives
+
 
 ##### Création d'un sitemap
 Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **_plugin** à la racine du projet.
