@@ -120,6 +120,20 @@ Un blog statique ne permet pas directement de mettre en place un système de com
 La cerise sur le gateau, Disqus est gratuit pour un petit blog. L'outils est disponible en Français, il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
 
 ##### Automatiser le déploiement vers un FTP
+Il existe plusieurs solutions pour envoyer le site généré sur un FTP. [Glynn](https://github.com/dmathieu/glynn) est distribué sous la forme d'une gem et fonctionne parfaitement.
+
+Il faut ajouter dans la configuration les informations du serveur FTP.
+{% highlight ruby %}
+ftp_host: ftp.adresseDeMonFTP.fr
+ftp_username: nomUtilisateur
+ftp_dir: /repertoireDeDestination
+ftp_passive: false
+{% endhighlight %}
+
+Générer le blog et le déployer est alors un jeu d'enfant, il suffit de se placer à la racine du projet et de taper la commande **glynn**.
+{% highlight ruby %}
+glynn
+{% endhighlight %}
 
 ##### Benchmarks et tests sur Amazon S3
 Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce blog était précedement un blog Wordpress placé sur un hébergement OVH Mutualisé. Il n'y avait aucune optimisation particulière (pas de cache, un theme peu optimisé, ...)
