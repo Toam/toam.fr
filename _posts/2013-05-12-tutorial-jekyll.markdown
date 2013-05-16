@@ -7,7 +7,7 @@ comments: true
 
 ---
 
-Le but de ce tutoriel est de vous guider dans la mise en place d'un blog statique grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de caches, tout est ici caché par définition. Il y a deux avantages a avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi auncun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
+Le but de ce tutoriel est de vous guider dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi auncun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
 
 <!--more-->
 ##### Installation Jekyll
@@ -34,7 +34,11 @@ La commande **serve** propose une option intéressante, **watch** qui permet de 
 $ jekyll serve -w
 {% endhighlight %}
 
-##### Création des pages et des articles
+##### Création d'articles
+
+##### Création de pages
+
+##### Inclure des images
 
 ##### Permaliens
 
