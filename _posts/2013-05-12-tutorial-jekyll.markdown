@@ -34,13 +34,36 @@ La commande **serve** propose une option intéressante, **watch** qui permet de 
 $ jekyll serve -w
 {% endhighlight %}
 
-##### Personalisation du template
-
 ##### Création d'articles
+Les posts doivent se trouver dans le dossier **\_posts**, ils peuvent être ecrit en [Markdown](http://daringfireball.net/projects/markdown/) ou en [Textile](http://textile.sitemonks.com/). 
+Pour ajouter un article, il faut créer un fichier **ANNEE-MOIS-JOUR-titre.md** ou **ANNEE-MOIS-JOUR-titre.textile** (donc par exemple 2013-03-10-Titre-de-mon-article.md). 
+Les pages commence par quelques lignes de YAML pour la configuration. Les formats Markdown et Textile sont relativement simple, il n'y a pas de code HTML à écrire, le code est généré lors de la génération de la page.
+
+Voici un exemple d'article :
+{% highlight sh %}
+---
+published: true
+layout: post
+title: "Tutoriel : Créer un blog statique avec Jekyll"
+category: jekyll
+---
+#### Mon titre en H4
+Bonjour, je suis un article, je peux avoir des mots en _italique_, d'autres en **gras** et des [liens](http://www.jekyllrb.com).
+{% endhighlight %}
+
+Vous trouverez plus de détails sur le markdown dans [ce guide](http://daringfireball.net/projects/markdown/syntax).
 
 ##### Création de pages
 
 ##### Inclure des images
+Il existe plusieurs solutions pour placer des images, le plus simple étant de créer un dossier **imgages** à la racine du projet. Lors de la génération du blog, il sera copier avec son contenu dans le dossier **\_site**.
+
+L'image sera donc accessible directement depuis les pages et les articles :
+{% highlight ruby %}
+<img src="{{ site.url }}/images/monImage.png" />
+{% endhighlight %}
+
+##### Personalisation du template
 
 ##### Permaliens
 
@@ -136,4 +159,4 @@ Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce b
 Il est encore possible de faire mieux avec ce blog statique, nottement au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
 
 ##### Conclusion
-Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement destiné aux developpeurs . 
+Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement destiné aux developpeurs .
