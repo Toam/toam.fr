@@ -7,32 +7,41 @@ comments: true
 
 ---
 
-Le but de ce guide est de vous guider dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi aucun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
+Le but de ce guide est de vous accompagner dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages à partir des templates, application des plugins, ...).
+
+Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout étant ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi aucun souci de sécurité, une plus grande liberté d'hébergement et bien plus encore...
 
 <!--more-->
 ##### Installation de Jekyll
-La première étape est d'installer la gem Jekyll. Cela suppose que **Ruby** et **RubyGems** soient installés sur votre système.
+La première étape est d'installer la gem **Jekyll**. Cela suppose que **Ruby** et **RubyGems** soient installés sur votre système.
 {% highlight sh %}
 $ gem install jekyll
 {% endhighlight %}
 
-Il faut ensuite se placer dans le dossier où vous voulez créer votre blog avant de lancer la création.
+Il faut ensuite se placer dans le dossier où vous voulez créer votre blog avant de lancer sa création. Jekyll va créer l'arborescence de base de votre blog.
 {% highlight sh %}
 $ jekyll new monblog
 $ cd monblog
 {% endhighlight %}
 
-Jekyll embarque le serveur WEBrick, il est donc possible de voir directement le blog grâce à la commande **serve**.
+Jekyll embarque le serveur WEBrick, il est donc possible de voir directement le blog grâce à la commande **serve**. Cette commande va générer le blog et créer les fichiers statiques correspondant.
 {% highlight sh %}
 $ jekyll serve
 {% endhighlight %}
 
-Le blog est alors visible à cette adresse : **http://localhost:4000**
+Il est possible de voir le blog dans un navigateur à cette adresse : **http://localhost:4000**
 
 La commande **serve** propose une option intéressante, **watch** qui permet de mettre à jour automatiquement le blog pendant le développement. Dès qu'un fichier est modifié (par exemple le contenu d'un article de blog), les pages correspondantes sont re-générées.
 {% highlight sh %}
 $ jekyll serve -w
 {% endhighlight %}
+
+##### Organisation du blog
+
+Suite à la génération du blog, Jekyll a créé le minimum pour générer un blog. Le fichier **\_config** contient la configuration générale du blog, le dossier **\_layout** contient les templates qui serviront à générer les pages. Le dossier **\_post** contient les articles et le dossier **\_site** contient le blog généré. C'est ce dernier dossier qu'il faudra placer sur votre serveur si vous souhaitez publier votre blog.
+
+<img src="/img/2013-05-12-guide-demarrage-jekyll/arborescence.png"/>
+
 
 ##### Créer des articles
 Les posts doivent se trouver dans le dossier **\_posts**, ils peuvent être écrit en <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> ou en <a href="http://textile.sitemonks.com/" target="_blank">Textile</a>. 
@@ -132,7 +141,7 @@ Il est ensuite très simple d'ajouter une navigation entre les pages. Le code su
 {% endhighlight %}
 
 ##### Création d'un sitemap
-Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **\_plugin** à la racine du projet.
+Il est possible de créer un sitemap grâce à un plugin qui sera lancé automatiquement à chaque génération du blog. Il faut placer le fichier **sitemap_generator.rb** [disponible à cette adresse](https://github.com/kinnetica/jekyll-plugins/blob/master/sitemap_generator.rb) dans le dossier **\_plugins** à la racine du projet.
 
 La configuration du plugin est très simple, elle se fait au début du fichier.
 {% highlight ruby %}
@@ -147,7 +156,7 @@ Suite à une nouvelle génération du blog, un fichier **sitemap.xml** devrait s
 ##### Commentaires avec Disqus
 Un blog statique ne permet pas directement de mettre en place un système de commentaire, mais il existe une solution ! Disqus est un service qui permet aux visiteurs de participer dans les articles simplement depuis quelques lignes de Javascript. Le service fonctionne parfaitement sous Jenkyll et propose même une [page d'aide pour vous aider dans l'intégration](http://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
-La cerise sur le gâteau, Disqus est gratuit pour un petit blog et l'outils est disponible en Français. Il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
+La cerise sur le gâteau, Disqus est gratuit pour un petit blog et l’outil est disponible en Français. Il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
 
 ##### Automatiser le déploiement vers un FTP
 Il existe plusieurs solutions pour envoyer le site généré sur un FTP. [Glynn](https://github.com/dmathieu/glynn) est distribué sous la forme d'une gem et fonctionne parfaitement.
@@ -167,11 +176,13 @@ $ glynn
 
 Félicitation, votre blog est en ligne !
 
-##### Benchmarks
-Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce blog était précédemment un blog Wordpress placé sur un hébergement OVH Mutualisé. Il n'y avait aucune optimisation particulière (pas de cache, un thème peu optimisé, ...)
-
-
-Il est encore possible de faire mieux avec ce blog statique, notamment au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
-
 ##### Conclusion
-Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement réservé aux développeurs.
+Un chiffre pour conclure, sur le même hébergement (un serveur mutualisé chez OHV), ce blog se charge plus de 3 fois plus vite. Le blog Wordpress pourrait faire mieux (avec du cache par exemple), les deux systèmes sont comparé sans optimisation particulière.
+<img src="/img/2013-05-12-guide-demarrage-jekyll/faster.png">
+
+Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement réservé aux développeurs. Il ne sera pas non plus intéressant dans un cadre où plusieurs personnes collaborent sur des articles, les plate-formes de blogs comme Wordpress permettent de faire beaucoup de choses. Cependant dans le cadre d'un blog perso, c'est clairement une option à considérer.
+
+Jekyll est de plus en plus populaire et des solutions à ses limitations commencent à apparaître. Il est possible d'automatiser le déploiement depuis github, ou même 
+d'avoir un back office sur un site déporté. Ces sujets feront probablement l'objet d'un autre article...
+
+Et vous, que pensez-vous de Jekyll ? Est-ce que vous être prêt à l'utiliser pour votre blog ?
