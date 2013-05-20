@@ -40,7 +40,7 @@ $ jekyll serve -w
 
 Suite à la génération du blog, Jekyll a créé le minimum pour générer un blog. Le fichier **\_config** contient la configuration générale du blog, le dossier **\_layout** contient les templates qui serviront à générer les pages. Le dossier **\_post** contient les articles et le dossier **\_site** contient le blog généré. C'est ce dernier dossier qu'il faudra placer sur votre serveur si vous souhaitez publier votre blog.
 
-<img src="/img/2013-05-12-guide-demarrage-jekyll/arborescence.png"/>
+<img src="/img/2013-05-20-guide-demarrage-jekyll/arborescence.png"/>
 
 
 ##### Créer des articles
@@ -178,7 +178,7 @@ Félicitation, votre blog est en ligne !
 
 ##### Conclusion
 Un chiffre pour conclure, sur le même hébergement (un serveur mutualisé chez OHV), ce blog se charge plus de 3 fois plus vite. Le blog Wordpress pourrait faire mieux (avec du cache par exemple), les deux systèmes sont comparé sans optimisation particulière.
-<img src="/img/2013-05-12-guide-demarrage-jekyll/faster.png">
+<img src="/img/2013-05-20-guide-demarrage-jekyll/faster.png">
 
 Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement réservé aux développeurs. Il ne sera pas non plus intéressant dans un cadre où plusieurs personnes collaborent sur des articles, les plate-formes de blogs comme Wordpress permettent de faire beaucoup de choses. Cependant dans le cadre d'un blog perso, c'est clairement une option à considérer.
 
