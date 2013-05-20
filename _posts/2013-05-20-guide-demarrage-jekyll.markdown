@@ -7,9 +7,9 @@ comments: true
 
 ---
 
-Le but de ce guide est de vous accompagner dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages à partir des templates, application des plugins, ...).
+Le but de ce guide est de vous accompagner dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entendu parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages à partir des templates, application des plugins, ...).
 
-Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout étant ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi aucun souci de sécurité, une plus grande liberté d'hébergement et bien plus encore...
+Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est caché ici par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous n'aurez aucun souci de sécurité, une plus grande liberté d'hébergement et bien plus encore...
 
 <!--more-->
 ##### Installation de Jekyll
