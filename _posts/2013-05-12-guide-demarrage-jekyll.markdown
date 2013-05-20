@@ -1,13 +1,13 @@
 ---
 published: true
 layout: post
-title: "Guide de démarage : créer un blog statique avec jekyll"
+title: "Guide de démarrage : créer un blog statique avec jekyll"
 category: jekyll
 comments: true
 
 ---
 
-Le but de ce guide est de vous guider dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi auncun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
+Le but de ce guide est de vous guider dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entend parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages a partir des templates, génération des pages, ...). Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est ici caché par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous aurez aussi aucun soucis de sécurité, une plus grande liberté d'hébergement et bien plus encore...
 
 <!--more-->
 ##### Installation de Jekyll
@@ -35,7 +35,7 @@ $ jekyll serve -w
 {% endhighlight %}
 
 ##### Créer des articles
-Les posts doivent se trouver dans le dossier **\_posts**, ils peuvent être ecrit en <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> ou en <a href="http://textile.sitemonks.com/" target="_blank">Textile</a>. 
+Les posts doivent se trouver dans le dossier **\_posts**, ils peuvent être écrit en <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> ou en <a href="http://textile.sitemonks.com/" target="_blank">Textile</a>. 
 Pour ajouter un article, il faut créer un fichier **ANNEE-MOIS-JOUR-titre.md** ou **ANNEE-MOIS-JOUR-titre.textile** (donc par exemple 2013-03-10-Titre-de-mon-article.md). 
 Les pages commence par quelques lignes de YAML pour la configuration. Les formats Markdown et Textile sont relativement simple, il n'y a pas de code HTML à écrire, le code est généré lors de la génération de la page.
 
@@ -77,7 +77,7 @@ Il y a un système d'héritage très simple entre les templates. Par exemple le 
 Plus d'informations sur ce système de template sont présent <a href="http://wiki.shopify.com/Liquid" target="_blank">sur cette page</a>
 
 ##### Permaliens
-Les liens vers les articles sont parametrables dans le fichier de congiguration du blog. Par exemple pour définir un formation de type **http://www.monblog.fr/2013-03-10-Titre-de-mon-article**, il faudra définir dans le fichier **\_config.yml**
+Les liens vers les articles sont paramétrables dans le fichier de configuration du blog. Par exemple pour définir un formation de type **http://www.monblog.fr/2013-03-10-Titre-de-mon-article**, il faudra définir dans le fichier **\_config.yml**
 {% highlight yaml %}
 permalink: /:day-:month-:year-:title
 {% endhighlight %}
@@ -85,7 +85,7 @@ permalink: /:day-:month-:year-:title
 Plus d'info sur les permaliens, avec tous les formats possible <a href="http://jekyllrb.com/docs/permalinks/" target="_blank">sur cette page</a>.
 
 ##### Localiser Jekyll
-Il existe plusieurs solutions pour localiser Jenkins. Il est par exemple possible d'utiliser le plugin <a href="https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb">i18n_filter</a>. Le principe est d'utilier les fichiers de traduction de la gem <a href="https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale">rails-i18n</a> et de les copiers dans le dossier **\_locales** à la racine du projet.
+Il existe plusieurs solutions pour localiser Jenkins. Il est par exemple possible d'utiliser le plugin <a href="https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb">i18n_filter</a>. Le principe est d’utiliser les fichiers de traduction de la gem <a href="https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale">rails-i18n</a> et de les copier dans le dossier **\_locales** à la racine du projet.
 
 Le code suivant permet d'afficher la date de publication d'un article sous la forme "10 Mars 2013" après avoir configuré la locale **fr** dans le plugin.
 {% highlight ruby %}
@@ -94,7 +94,7 @@ Le code suivant permet d'afficher la date de publication d'un article sous la fo
 {% endhighlight %}
 
 ##### Mise en place de la pagination sur la page d'accueil
-La page d'acceuil listant tous les articles n'est pas paginé. Pourtant Jekyll embarque cette fonctionnalité par défault. Pour en profiter, il faut ajouter un paramètre dans le fichier **config.yml **.
+La page d’accueil listant tous les articles n'est pas paginé. Pourtant Jekyll embarque cette fonctionnalité par défaut. Pour en profiter, il faut ajouter un paramètre dans le fichier **config.yml **.
 {% highlight ruby %}
 paginate: 5
 {% endhighlight %}
@@ -147,7 +147,7 @@ Suite à une nouvelle génération du blog, un fichier **sitemap.xml** devrait s
 ##### Commentaires avec Disqus
 Un blog statique ne permet pas directement de mettre en place un système de commentaire, mais il existe une solution ! Disqus est un service qui permet aux visiteurs de participer dans les articles simplement depuis quelques lignes de Javascript. Le service fonctionne parfaitement sous Jenkyll et propose même une [page d'aide pour vous aider dans l'intégration](http://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
-La cerise sur le gateau, Disqus est gratuit pour un petit blog et l'outils est disponible en Français. Il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
+La cerise sur le gâteau, Disqus est gratuit pour un petit blog et l'outils est disponible en Français. Il est possible de changer la langue depuis le panneau de configuration (si vous voulez tester Disqus, vous pouvez laisser un commentaire ci-dessous ;)).
 
 ##### Automatiser le déploiement vers un FTP
 Il existe plusieurs solutions pour envoyer le site généré sur un FTP. [Glynn](https://github.com/dmathieu/glynn) est distribué sous la forme d'une gem et fonctionne parfaitement.
@@ -168,10 +168,10 @@ $ glynn
 Félicitation, votre blog est en ligne !
 
 ##### Benchmarks
-Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce blog était précedement un blog Wordpress placé sur un hébergement OVH Mutualisé. Il n'y avait aucune optimisation particulière (pas de cache, un theme peu optimisé, ...)
+Quelques chiffres pour conclure bien qu'ils ne représente pas grand chose. Ce blog était précédemment un blog Wordpress placé sur un hébergement OVH Mutualisé. Il n'y avait aucune optimisation particulière (pas de cache, un thème peu optimisé, ...)
 
 
-Il est encore possible de faire mieux avec ce blog statique, nottement au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
+Il est encore possible de faire mieux avec ce blog statique, notamment au niveau des fichiers CSS et Javascript qu'il faudrait réduire et concaténer.
 
 ##### Conclusion
-Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement destiné aux developpeurs .
+Jenkyll est un moteur de blog simple et efficace. Il n'est évidement pas destiné à toutes les utilisations, son fonctionnement étant clairement réservé aux développeurs.
