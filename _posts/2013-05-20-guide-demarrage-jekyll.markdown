@@ -68,7 +68,7 @@ Vous trouverez plus de détails sur le markdown dans <a href="http://daringfireb
 La création des pages est tout aussi simple que la création des articles. Pour créer une page, il faut placer un fichier HTML à la racine du projet. Lors de la génération du blog, ce fichier sera placé dans le dossier **\_site**.
 
 ##### Inclure des images
-Il existe plusieurs solutions pour placer des images, le plus simple étant de créer un dossier **imgages** à la racine du projet. Lors de la génération du blog, il sera copier avec son contenu dans le dossier **\_site**.
+Il existe plusieurs solutions pour placer des images, le plus simple étant de créer un dossier **images** à la racine du projet. Lors de la génération du blog, il sera copier avec son contenu dans le dossier **\_site**.
 
 L'image sera donc accessible directement depuis les pages et les articles :
 {% highlight ruby %}
