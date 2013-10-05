@@ -1,23 +1,30 @@
 ---
 published: false
 layout: post
+title: "Introduction à NodeJS"
 category: nodejs
 comments: true
 ---
-
-## Introduction à NodeJS
 
 [NodeJS c'est de la boulette...]
 
 <!--more-->
 
-# Installation de NodeJS sur un Mac
+Au programme de ce tutoriel, l'instalation de NodeJS sur votre machine et la création d'une application très simple.
 
-# Installation de NodeJS sur Linux
-
-# Installation de NodeJS sur Windows
+#### Installation de NodeJS sur un Mac
 
 
+#### Installation de NodeJS sur Linux
+
+
+#### Installation de NodeJS sur Windows
+
+
+#### Hello World
+
+
+#### Express et création d'une première application
 {% highlight sh %}
 var express = require("express");
 var app = express();
