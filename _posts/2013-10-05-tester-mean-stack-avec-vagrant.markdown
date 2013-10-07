@@ -49,7 +49,7 @@ C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost
 
 ##### Boilerplate Mean
 
-L'idée de la stack Mean a fait son apparition sur le <a href="http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and" target="_blank">blog de MongoDB</a>
+L'idée de la stack Mean a fait son apparition sur le <a href="http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and" target="_blank">blog de MongoDB</a>. Coté productivité, l'intérêt de cette stack est de proposer du Javascript sur toute la chaine. Les requêtes de la base de donnée MongoDB, le moteur de template, tout est en Javascript. On se retrouve donc avec une solution simple, où on ne doit pas faire de traitement de données entre chaque couche (on manipule ici que du JSON).
 
 Coté serveur on retrouve un serveur node.js assez simple et quelques modules : 
 - Express - un framework assez simple pour node.js
