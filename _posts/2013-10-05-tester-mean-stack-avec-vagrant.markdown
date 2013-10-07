@@ -37,7 +37,7 @@ Placez-vous dans le dossier du projet et tapez :
 $ vagrant up
 {% endhighlight %}
 
-Une fois que l'installation est terminé, il se se connecter à la machine
+Une fois que l'installation est terminé, il se se connecter à la machine et lancer l'application en utilisant Grunt.
 
 {% highlight sh %}
 $ vagrant ssh
@@ -62,7 +62,15 @@ Plus d'infos sur ce projet <a href="http://www.mean.io/">sur cette page</a>.
 
 ##### Grunt
 
-##### Vagrant & Chef
-Vagrant présente de nombreux avantages
+Grut est utilisé pour lancer l'application. C'est un outils d'automatisation quit permet en une commande de minifier, compiler, lancer les tests unitaires, etc. Il existe de nombreux plugins pour effectuer la plupart des taches courante lors du developpement.
 
-Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution.
+##### Vagrant & Chef
+
+Vagrant est un très bon outil à utiler sur un projet. Dans un contexte d'une équipe de développeur, il permet de pouvoir travailler en local sur un envirement homogène. L'automatisation de l'installation permet d'arriver très rapidement à ce résultat.
+
+Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution. On peut donc s'approcher au maximum de l'environement de production lors du développement ce qui est toujours un plus.
+
+##### Et la suite ?
+
+Vous disposez maintenant d'une VM
+Il est par exemple très simple de faire tourner cette application sur Amazon Web Service en utilisant <a href="https://github.com/mitchellh/vagrant-aws">vagrant-aws</a>.
