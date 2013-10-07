@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: "Tester la MEAN Stack avec Vagrant"
+title: Tester la MEAN Stack avec Vagrant
 category: node.js
 comments: true
 ---
@@ -49,22 +49,20 @@ C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost
 
 ##### Boilerplate Mean
 
-Le projet est basé
+Le projet est basé sur la boiterplate Mean qui regroupe tout ce qu'il faut pour démarer un projet avec ces technos
 
 Coté serveur on retrouve un serveur node.js assez simple et quelques modules : 
+- Express - un framework assez simple pour node.js
+- Mongoose - un orm pour gérer la persistance dans MongoDB
+- Passport - une bibliotèque d'authentification pour node.js
 
-+ Express - un framework assez simple pour node.js
-+ Mongoose - un orm pour gérer la persistance dans MongoDB
-+ Passport - une bibliotèque d'authentification pour node.js 
-
-AngularJS
-Boostrap
+Coté client, on retrouve donc AngularJS qui sera chargé de générer communiquer avec l'API et de générer les vues. Le thème graphique est basé sur Boostrap.
 
 Plus d'infos sur ce projet <a href="http://www.mean.io/">sur cette page</a>.
 
 ##### Grunt
 
 ##### Vagrant & Chef
+Vagrant présente de nombreux avantages
 
-+ travailler avec Vagrant c'est de la boulette
-
+Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution.
