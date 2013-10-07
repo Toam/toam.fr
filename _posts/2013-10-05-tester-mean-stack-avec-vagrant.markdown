@@ -49,7 +49,7 @@ C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost
 
 ##### Boilerplate Mean
 
-Le projet est basé sur la boiterplate Mean qui regroupe tout ce qu'il faut pour démarer un projet avec ces technos
+L'idée de la stack Mean a fait son apparition sur le <a href="http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and" target="_blank">blog de MongoDB</a>
 
 Coté serveur on retrouve un serveur node.js assez simple et quelques modules : 
 - Express - un framework assez simple pour node.js
@@ -58,7 +58,7 @@ Coté serveur on retrouve un serveur node.js assez simple et quelques modules :
 
 Coté client, on retrouve donc AngularJS qui sera chargé de générer communiquer avec l'API et de générer les vues. Le thème graphique est basé sur Boostrap.
 
-Plus d'infos sur ce projet <a href="http://www.mean.io/">sur cette page</a>.
+Plus d'infos sur ce projet <a href="http://www.mean.io/" target="_blank">sur cette page</a>.
 
 ##### Grunt
 
@@ -68,9 +68,10 @@ Grut est utilisé pour lancer l'application. C'est un outils d'automatisation qu
 
 Vagrant est un très bon outil à utiler sur un projet. Dans un contexte d'une équipe de développeur, il permet de pouvoir travailler en local sur un envirement homogène. L'automatisation de l'installation permet d'arriver très rapidement à ce résultat.
 
-Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution. On peut donc s'approcher au maximum de l'environement de production lors du développement ce qui est toujours un plus.
+Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution. On peut donc s'approcher au maximum de l'environement de production lors du développement ce qui est toujours un plus. 
+
+Il est par exemple très simple de faire tourner cette application sur Amazon Web Service en utilisant <a href="https://github.com/mitchellh/vagrant-aws" target="_blank">vagrant-aws</a>.
 
 ##### Et la suite ?
 
-Vous disposez maintenant d'une VM
-Il est par exemple très simple de faire tourner cette application sur Amazon Web Service en utilisant <a href="https://github.com/mitchellh/vagrant-aws">vagrant-aws</a>.
+Vous disposez maintenant de quoi commencer à jouer avec AngularJS et Node.js pour créer une application. Le projet <a href="http://www.mean.io" target="_blank">mean.io</a> est une base, à vous de la personaliser pour l'utiliser dans vos projet.
