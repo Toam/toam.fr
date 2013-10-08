@@ -24,9 +24,9 @@ Même principe pour Virtualbox, <a href="https://www.virtualbox.org/wiki/Downloa
 
 ##### Récupération du projet
 
-Vous pouvez maintenant récupérer le projet en téléchargeant <a href="#" target="_blank">cette archive</a> (le projet se trouve sur Github à <a href="#" target="_blank">cette adresse</a>).
+Vous pouvez maintenant récupérer le projet en téléchargeant <a href="https://github.com/Toam/mean-vagrant/archive/master.zip" target="_blank">cette archive</a> (le projet se trouve sur Github à <a href="https://github.com/Toam/mean-vagrant" target="_blank">cette adresse</a>).
 
-Le projet se compose d'un fichier de configuration Vagrant ('Vagrantile', à la racine), d'un dossier avec les recettes Chef (le dossier 'cookbooks') et des sources du projet (dans 'src') .
+Le projet se compose d'un fichier de configuration Vagrant ('Vagrantile', à la racine), d'un dossier avec les recettes Chef (le dossier 'cookbooks') et des sources du projet (dans 'src').
 
 ##### Le tutoriel le plus court du monde
 
