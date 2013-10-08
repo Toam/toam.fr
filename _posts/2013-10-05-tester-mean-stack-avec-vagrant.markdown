@@ -12,7 +12,7 @@ Ce qui rend ces technologies intéressantes est l'utilisation du javascript sur 
 
 Vagrant est une techno qui permet de spécifier des fichiers de configuration pour réaliser très simplement des machines virtuelles. L'intéret est qu'il est possible d'installer un système complet (OS + applications + configuration) en une seule commande.
 
-Le but de cette article est d'utiliser Vagrant pour mettre en oeuvre très rapidement un application de démo basé sur la stack MEAN.
+Le but de cet article est d'utiliser Vagrant pour mettre en oeuvre très rapidement un application de démo basé sur la stack MEAN.
 
 <!--more-->
 
@@ -24,11 +24,11 @@ Même principe pour Virtualbox, <a href="https://www.virtualbox.org/wiki/Downloa
 
 ##### Récupération du projet
 
-Vous pouvez maitenant récupérer le projet en téléchargeant <a href="#" target="_blank">cette archive</a> (le projet se trouve sur Github à <a href="#" target="_blank">cette addresse</a>).
+Vous pouvez maintenant récupérer le projet en téléchargeant <a href="#" target="_blank">cette archive</a> (le projet se trouve sur Github à <a href="#" target="_blank">cette adresse</a>).
 
-Le projet se compote d'un fichier de configuration Vagrant ('Vagrantile', à la racine), d'un dossier avec les recettes Chef (le dossier 'cookbooks') et des sources du projet (dans 'src') .
+Le projet se compose d'un fichier de configuration Vagrant ('Vagrantile', à la racine), d'un dossier avec les recettes Chef (le dossier 'cookbooks') et des sources du projet (dans 'src') .
 
-##### Le tutorial le plus court du monde
+##### Le tutoriel le plus court du monde
 
 La magie de Vagrant s'opère maintenant. Une seule commande va demander à Vagrant de télécharger une image d'un système d'exploitation vierge (Debian dans notre cas), d'installer tout ce qu'il faut (node.js, MongoDB et leurs dépendances) et d'installer le projet. Il faudra être indulgent, l'opération peut prendre jusqu'à quelques dizaines de minutes.
 
@@ -45,7 +45,7 @@ $ cd src
 $ grunt
 {% endhighlight %}
 
-C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" targer="_blank">http://localhost:4000</a> pour accéder au projet. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
+C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" target="_blank">http://localhost:4000</a> pour accéder au projet. Vous devriez pouvoir créer un compte, écrire, lister et modifier des articles. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
 
 ##### Boilerplate Mean
 
@@ -60,15 +60,23 @@ Coté client, on retrouve donc AngularJS qui sera chargé de générer communiqu
 
 Plus d'infos sur ce projet <a href="http://www.mean.io/" target="_blank">sur cette page</a>.
 
+##### Organisation du projet
+
+L'application se trouve dans le dossier **src/**. La partie node.js se trouve ensuite dans le dossier **app/**. 
+
+La partie AngularJS dans le dossier **public/js/** pour les controllers, la configuration et les services. Les vues générés coté client se trouvent dans le dossier **public/views/**.
+
+Comme son nom l'indique, le dossier **config/** contient la configuration coté serveur pour les différents environnements.
+
 ##### Grunt
 
-Grut est utilisé pour lancer l'application. C'est un outils d'automatisation quit permet en une commande de minifier, compiler, lancer les tests unitaires, etc. Il existe de nombreux plugins pour effectuer la plupart des taches courante lors du developpement.
+Grut est utilisé pour lancer l'application. C'est un outils d'automatisation qui permet en une commande de compiler et minifier le code, de lancer les tests unitaires, etc. Il existe de nombreux plugins pour effectuer la plupart des taches courante lors du développement.
 
 ##### Vagrant & Chef
 
-Vagrant est un très bon outil à utiler sur un projet. Dans un contexte d'une équipe de développeur, il permet de pouvoir travailler en local sur un envirement homogène. L'automatisation de l'installation permet d'arriver très rapidement à ce résultat.
+Vagrant est un très bon outil à utiliser sur un projet. Dans un contexte d'une équipe de développeur, il permet de pouvoir travailler en local sur un environment homogène. L'automatisation de l'installation permet d'arriver très rapidement à ce résultat.
 
-Le fait d'utiliser Chef pour installer la machine n'est pas annodin. Cette techno sera utile au moment du deployement de l'application sur un serveur de prodution. On peut donc s'approcher au maximum de l'environement de production lors du développement ce qui est toujours un plus. 
+Le fait d'utiliser Chef pour installer la machine n'est pas anodin. Cette techno sera utile au moment du deployment de l'application sur un serveur de production. On peut donc s'approcher au maximum de l'environnement de production lors du développement ce qui est toujours un plus. 
 
 Il est par exemple très simple de faire tourner cette application sur Amazon Web Service en utilisant <a href="https://github.com/mitchellh/vagrant-aws" target="_blank">vagrant-aws</a>.
 
