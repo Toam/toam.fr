@@ -42,8 +42,11 @@ Une fois que l'installation est terminé, il se se connecter à la machine et la
 {% highlight sh %}
 $ vagrant ssh
 $ cd src
-$ grunt
+$ npm install
+$ node server.js
 {% endhighlight %}
+
+* "npm install" n'est nécessaire qu'au premier lancement pour charger les dépendances.
 
 C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" target="_blank">http://localhost:4000</a> pour accéder au projet. Vous devriez pouvoir créer un compte, écrire, lister et modifier des articles. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
 
