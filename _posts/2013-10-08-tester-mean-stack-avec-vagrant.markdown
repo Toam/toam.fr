@@ -37,16 +37,14 @@ Placez-vous dans le dossier du projet et tapez :
 $ vagrant up
 {% endhighlight %}
 
-Une fois que l'installation est terminé, il se se connecter à la machine et lancer l'application en utilisant Grunt.
+Une fois que l'installation est terminé, il se se connecter à la machine, installer les dépendances et lancer le serveur.
 
 {% highlight sh %}
 $ vagrant ssh
 $ cd src
 $ sudo npm install
-$ grunt
+$ node server.js
 {% endhighlight %}
-
-* "npm install" n'est nécessaire qu'au premier lancement pour charger les dépendances.
 
 C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" target="_blank">http://localhost:3000</a> pour accéder au projet. Vous devriez pouvoir créer un compte, écrire, lister et modifier des articles. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
 
@@ -70,10 +68,6 @@ L'application se trouve dans le dossier **src/**. La partie node.js se trouve en
 La partie AngularJS dans le dossier **public/js/** pour les controllers, la configuration et les services. Les vues générés coté client se trouvent dans le dossier **public/views/**.
 
 Comme son nom l'indique, le dossier **config/** contient la configuration coté serveur pour les différents environnements.
-
-##### Grunt
-
-Grut est utilisé pour lancer l'application. C'est un outils d'automatisation qui permet en une commande de compiler et minifier le code, de lancer les tests unitaires, etc. Il existe de nombreux plugins pour effectuer la plupart des taches courante lors du développement.
 
 ##### Vagrant & Chef
 
