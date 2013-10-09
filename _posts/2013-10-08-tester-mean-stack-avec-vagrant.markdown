@@ -1,18 +1,18 @@
 ---
 published: true
 layout: post
-title: Tester la MEAN Stack avec Vagrant
+title: MEAN 1ère partie - Tester la MEAN Stack avec Vagrant
 category: node.js
 comments: true
 ---
 
-La MEAN Stack est un ensemble de technologies utilisées pour créer des applications webs. Elle se compose d'AngularJS comme framework coté client, node.js pour le framework serveur et MongoDB pour la base de données. Node.js sert à créer une API sur le serveur pour manipuler les données et AngularJS est responsable de l'affichage des pages grâce à son moteur de template. 
+La MEAN Stack est un ensemble de technologies utilisées pour créer des applications web. Elle se compose d'AngularJS comme framework coté client, node.js pour le framework serveur et MongoDB pour la base de données. Node.js sert à créer une API sur le serveur pour manipuler les données et AngularJS est responsable de l'affichage des pages grâce à son moteur de template. 
 
 Ce qui rend ces technologies intéressantes est l'utilisation du javascript sur toute la chaine, des requêtes MongoDB à l'affichage dans le navigateur. L'application que nous allons installer contient tout ce qu'il faut pour démarrer un projet et découvrir ce qu'on peut faire avec la stack MEAN.
 
 Vagrant est une techno qui permet de spécifier des fichiers de configuration pour réaliser très simplement des machines virtuelles. L'intéret est qu'il est possible d'installer un système complet (OS + applications + configuration) en une seule commande.
 
-Le but de cet article est d'utiliser Vagrant pour mettre en oeuvre très rapidement un application de démo basé sur la stack MEAN.
+Le but de cet article est d'utiliser Vagrant pour mettre en oeuvre très rapidement une application de démo basée sur la stack MEAN.
 
 <!--more-->
 
@@ -42,13 +42,13 @@ Une fois que l'installation est terminé, il se se connecter à la machine et la
 {% highlight sh %}
 $ vagrant ssh
 $ cd src
-$ npm install
-$ node server.js
+$ sudo npm install
+$ grunt
 {% endhighlight %}
 
 * "npm install" n'est nécessaire qu'au premier lancement pour charger les dépendances.
 
-C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" target="_blank">http://localhost:4000</a> pour accéder au projet. Vous devriez pouvoir créer un compte, écrire, lister et modifier des articles. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
+C'est prêt, vous pouvez maintenant vous connecter sur <a href="http://localhost:4000" target="_blank">http://localhost:3000</a> pour accéder au projet. Vous devriez pouvoir créer un compte, écrire, lister et modifier des articles. Le reste de cet article va permettre de comprendre en détail comment Vagrant réalise cette prouesse !
 
 ##### Boilerplate Mean
 
