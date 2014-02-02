@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: MEAN 1ère partie - Tester la MEAN Stack avec Vagrant
+title: Tester la MEAN Stack avec Vagrant
 category: node.js
 comments: true
 ---
