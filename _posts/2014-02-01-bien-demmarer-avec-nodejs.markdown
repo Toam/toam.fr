@@ -6,6 +6,9 @@ category: node.js
 comments: true
 ---
 
+http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
+https://medium.com/grand-things/522768ac482a
+
 Node.js
 ##### Ce que Node.js fait bien
 
@@ -14,6 +17,20 @@ Node.js
 Si vous souhaiter développer une application web classique complexe, c'est encore
 compliqué avec node.js. Il n'existe pas encore de Frameworks du niveau
 d'un Ruby on Rails.
+
+##### NPM
+NPM est le gestionaire de packet de Node.js, il permet d'installer très
+simplement les contributions de la communauté (applications, outils,
+frameworks...).
+
+##### Express
+C'est le package le plus populaire que vous pourrez récupérer sur NPM.
+Il est utilisé pour ajouter à Node.js ce qu'il faut pour créer une
+application web (au niveau de la récupération des requêtes web et de la
+création des réponses nottament). Une excelente introduction à Node.js
+est le tutorial d'Express : http://expressjs.com/guide.html.
+L'équipe derrière Express est en train de préparer la version qui
+prendra la suite d'Express, KoaJS (http://koajs.com/).
 
 ##### Les Frameworks
 
@@ -29,6 +46,7 @@ Zend.
 Cependant l'écosysteme de node.js est en plein boom. De nouveaux
 frameworks sortent toutes les semaines et certain commencent à devenir
 des références.
+
 
 ###### Sails
 Sails est un Framework Node.js très intéressant. Il est 
