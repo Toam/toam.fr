@@ -1,0 +1,28 @@
+---
+layout: default
+title: Categories
+---
+<section>
+<div class="eight columns">
+  <h4>Categories</h4>
+  {% for category in site.categories %}
+  <strong>
+    <i class="icon-tag"></i>
+    {{ category | first }}
+  </strong>
+    <ul>
+      {% for posts in category %}
+        {% for post in posts %}
+          {% if post.url %}
+            <li>
+              <i class="icon-minus"></i>
+              <a href="{{ post.url }}">{{ post.title}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+  <br class="clear">
+  </section>
