@@ -4,7 +4,7 @@ layout: default
 <section>
 	<div class="eight columns">
 		<h4 class="post_title">{{ page.title }}</h4>
-		<span class="post_date">{{ page.date | localize: ":short" }}</span>
+		<span class="post_date">{{ page.date | date: '%d/%m/%Y' }}</span>
 		<span class="post_tag"><i class="icon-tag"></i> <a href="/categories/">{{ page.category }}</a></span>
 		{{ content }}
 		<hr/>
