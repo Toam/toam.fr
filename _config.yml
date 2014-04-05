@@ -3,9 +3,6 @@ pygments: true
 paginate: 5
 permalink: /:day-:month-:year-:title
 citation_category_name: "quote"
-ftp_host: ftp.jailbreakiphone4.fr
-ftp_username: jailbreal-toa
-ftp_dir: /
-ftp_passive: false
+markdown: kramdown
 prose:
   siteurl: "http://www.toam.fr"
