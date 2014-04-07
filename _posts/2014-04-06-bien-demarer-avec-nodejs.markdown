@@ -6,11 +6,13 @@ category: node.js
 comments: true
 ---
 
+Node.js est une technologie qui permet d'écrire du javascript coté serveur pour réaliser des applications webs. Le framework existe depuis 2009 et bien que très jeune, il attire de nombreux développeurs.
+
+##### Ce que Node.js fait bien
+Node.js est très performant sur les 
+
 http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js
 https://medium.com/grand-things/522768ac482a
-
-Node.js
-##### Ce que Node.js fait bien
 
 
 ##### Ce qu'il est plus difficile de faire avec Node.js (pour l'instant)
@@ -34,7 +36,6 @@ L'équipe derrière Express est en train de préparer la version qui
 prendra la suite d'Express, KoaJS (http://koajs.com/).
 
 ##### Les Frameworks
-
 La réactions des personnes qui découvrent node.js est souvent la même.
 Au début, l'impression est très bonne, node.js est rapide et permet de
 faire simpement des choses qui seraient compliquées avec d'autres
@@ -53,14 +54,8 @@ des références.
 Sails est un Framework Node.js très intéressant. Il est 
 
 ###### Kraken
-Paypal a surpris tout le monde en fin d'année dernière en annonçant
-qu'ils migraient certain de leurs services en node.js. Quelques temps
-apres cette annonce, ils ont partagé un framework, 
-<a href="https://github.com/paypal/kraken-js"
-taget="_blank">KrakenJS</a>. 
-Ce qui est intéressant c'est qu'ils ont mis l'accent sur la sécurité
-pour proposer
-un framework utilisable dans le monde de l'entreprise.
+Paypal a surpris tout le monde en fin d'année dernière en annonçant qu'ils migraient certain de leurs services en node.js. Quelques temps apres cette annonce, ils ont partagé un framework,  <a href="https://github.com/paypal/kraken-js" taget="_blank">KrakenJS</a>.
+Ce qui est intéressant c'est qu'ils ont mis l'accent sur la sécurité pour proposer un framework utilisable dans le monde de l'entreprise.
 
 
 ###### Meteor
@@ -76,21 +71,24 @@ aussi des solutions dédiés comme Nodejitsu. Il est aussi très simple
 d'heberger soit même un site en node.js, soit en passant par le serveur
 livré avec node.js ou en utilisant des serveurs dediés comme Phusion
 Passager.
+
 OVH parle depuis quelques mois de supporter le node.js sur les
 offres mutualisées. C'est quelque chose qu'on attend avec impatience,
  et ce sera très certainement un choix très intéressant.
 
 
 ##### Ressources en français
-Tuto sur
-http://fr.openclassrooms.com/informatique/cours/des-applications-ultra-rapides-avec-node-js
+Il y a un bon tutoriel sur <a href="http://fr.openclassrooms.com/informatique/cours/des-applications-ultra-rapides-avec-node-js" target="_blank">Open Classrooms</a> qui permet de partir du bon pied dans le dev node.js.
 
 ##### Ressources en anglais
-Il y a de plus de ressources en Français
+Un très bon tutoriel pour commencer <a href="http://expressjs.com/guide.html" target="_blank">est celui d'Express</a>. Il couvre les bases de ce module qui est utilisé dans quasiment tous les frameworks.
 
-Un cours intéractif : http://node.codeschool.com/
+Il y a aussi un cours intéractir sur <a href="http://node.codeschool.com/" target="_blank">CodeSchool</a> qui couvre des concepts important à maitriser. 
 
-Quelques tutoriaux :
-http://nodeguide.com/beginner.html
-http://www.nodebeginner.org/
+Pour travailler proprement en Javascript, il sera aussi rapidement nécessaire de faire de la lecture sur le langage lui même, on peut nottament cité l'exelent : <a href="http://www.amazon.fr/Javascript-Good-Parts-D-Crockford/dp/0596517742" target="_blank">Javascript: The good parts</a> de Douglas Crockford.
 
+Quelques autres tutoriaux:
+- http://nodeguide.com/beginner.html
+- http://www.nodebeginner.org/
+
+Maintenant c'est a vous de jouer !
