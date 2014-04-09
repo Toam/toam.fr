@@ -6,14 +6,6 @@ category: node.js
 comments: true
 ---
 
-http://blog.peterdecroos.com/blog/2014/02/01/koa-zero-to-todo-list/
-http://koajs.com/
-https://github.com/koajs/koa
-http://jlongster.com/2012/10/05/javascript-yield.html
-http://blog.stevensanderson.com/2013/12/21/experiments-with-koa-and-javascript-generators/
-https://github.com/koajs/koa/blob/master/docs/koa-vs-express.md
-
-
 [Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui fait qu'il est particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 4.0. Ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
 
 <!--more-->
