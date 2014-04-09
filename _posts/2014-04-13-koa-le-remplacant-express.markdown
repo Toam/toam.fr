@@ -40,14 +40,6 @@ On peut voir ici que la fonction qu'on passe à `app.get` est un callback. Les f
 La grosse nouveauté de Koa est d'utiliser les générateurs
 
 
-
-##### Le cascading
-
-
-
-##### La gestion des erreurs
-
-
 ##### Tester Koa
 
 ###### Installation de Node.js 0.11.9
@@ -56,7 +48,10 @@ La grosse nouveauté de Koa est d'utiliser les générateurs
 
 
 ##### Example
-https://github.com/shijuvar/Koa-CRUD
+
+Il existe pour l'instant peut d'exemple d'applicationn utilisant Koa. On peut trouver notamment cet exemple d'implémentation d'un CRUD : [https://github.com/shijuvar/Koa-CRUD](https://github.com/shijuvar/Koa-CRUD){:target="_blank"}.
 
 
 ##### Et ensuite ?
+
+Koa n'est pas encore utilisable en production, principalement parce qu'il tourne sur une version non stable de Node.js.
