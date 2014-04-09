@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Koa, le remplaçant d'Express
+title: "Koa, le remplaçant d'Express"
 category: node.js
 comments: true
 ---
@@ -14,16 +14,27 @@ http://blog.stevensanderson.com/2013/12/21/experiments-with-koa-and-javascript-g
 http://www.codersgrid.com/2013/12/19/koa-js-next-generation-web-framework-for-node-js/
 
 
-[Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui fait qu'il est particulier est qu'il a été réalisé par les auteurs d'Express. 
+[Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui fait qu'il est particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 2.0. Ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
 
 <!--more-->
 
 ##### Express
 
-Expres est le framework le plus utilisé pour Node.js. Il est très minimaliste, c'est simplement une surcouche pour la gestion des requêtes. Presque tous les frameworks
+Expres est le framework le plus utilisé pour Node.js. Il est très minimaliste, on peut le voir comme une surcouche pour la gestion des requêtes. Presque tous les frameworks plus gros sont basés sur Express.
+
+{% highlight js %}
+salut
+{% endhighlight %}
+
+##### Les générateurs
+
+La grosse nouveauté de Koa est d'utiliser les générateurs
+
 
 
 ##### Le cascading
+
+
 
 ##### La gestion des erreurs
 
