@@ -6,7 +6,7 @@ category: node.js
 comments: true
 ---
 
-[Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui le rend particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 4.0. Ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
+[Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui le rend particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 5.0. Ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
 
 <!--more-->
 
