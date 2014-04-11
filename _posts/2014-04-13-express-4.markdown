@@ -1,0 +1,35 @@
+---
+published: true
+layout: post
+title: "Express 4.0"
+category: node.js
+comments: true
+---
+
+Express est un des packets les plus connu de Node.js. C'est un framework minimaliste qui permet de construire des
+applications web. Cet article présente les nouveautés de la version 4.0 qui est disponible depuis cette semaine.
+
+##### Express 4.0
+
+##### app.configure()
+
+##### app.router()
+
+##### express.createServer()
+
+##### API de routage
+
+##### Performances 
+
+Il y a pour l'instant peut de projet qui utilisent la nouvelle version d'Express en production. La
+société SSP à fait le test sur leurs serveurs et ils expliquent dans <a
+href="http://tech.secretsaucepartners.com/express-4-tested-in-production/" target="_blank">un article</a> que depuis le
+passage à Express 4.0, les temps de réponses ont baissés de 20% et que la consomation de mémoire sur les serveurs a
+diminué de 10%.
+
+##### Conclusion
+
+Le passage à Express 4.0 est relativement simple. Il est donc intéressant de migrer rien que pour les gains de
+performance apporté par cette nouvelle version.
+
+Et vous, avez-vous migré vos projets en version 4.0 ?
