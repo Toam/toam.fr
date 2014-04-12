@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: "Express 4.0"
+title: "Quoi de neuf avec Express 4.0"
 category: node.js
 comments: true
 ---
@@ -9,25 +9,100 @@ comments: true
 Express est un des packets les plus connu de Node.js. C'est un framework minimaliste qui permet de construire des
 applications web. Cet article présente les nouveautés de la version 4.0 qui est disponible depuis cette semaine.
 
-##### Express 4.0
+Cette nouvelle version d'Express apporte quelques changements au niveau de l'API et des méthodes à utiliser. Un travail
+important à aussi été fait sur les performances.
 
-##### app.configure()
+<!--more-->
 
-##### app.router()
+##### Middleware
+Une des grosses nouveautés de la version 4.0 est que _connect_ n'est plus une dépendance. Du coup, la plus part des
+paquets qui étaient incluis dans Express ne le sont plus. On trouvait dans cette liste les outils comme _bodyParser_,
+_cookieParser_ ou encore _session_. Il faudra maintenant inclure manuellement ces composants.
+
+Ce changement permet que ces modules soient mis à jour plus facilement et surtout indépendamment d'Express.
+
+##### Disparition de app.configure()
+
+Dans les projets utilisant Express 3.0, il était possible d'utiliser la méthode _app.configure()_ pour définir une
+configuration par environnement :
+
+{% highlight js %}
+//Express 3.0
+app.configure('development', function() {
+   // configuration
+});
+{% endhighlight %}
+
+La façon de déclarer la configuration du projet a changé. La méthode _app.configure()_ n'existe plus, il faudra
+maintenant utiliser des _if_ ou un module externe :
+
+{% highlight js %}
+//Express 4.0
+var env = process.env.NODE_ENV || 'development';
+if ('development' == env) {
+   // configuration
+}
+{% endhighlight %}
+
+##### Nouvelle API de routage
+
+La déclaration des routes a aussi été modifié. Dans Express 3.0, il fallait utiliser _app.get_ et _app.post_ de la façon
+suivante : 
+{% highlight js %}
+//Express 3.0
+app.get('/utilisateurs', function(req, res){});
+app.post('/utilisateurs', function(req, res){});
+{% endhighlight %}
+
+Dans Express 4.0, un nouvelle méthode _route()_ a été ajouté. Elle retourne une instance de _Route_ qu'il est possible
+d'utiliser pour ajouter les functions de chaque route :
+{% highlight js %}
+//Express 4.0
+app.route('/utilisateurs')
+  .get(function(req, res, next) {})
+  .post(function(req, res, next) {})
+{% endhighlight %}
+
+En plus de _get()_ et _post()_, il est possible d'utiliser la méthode _all_ qui sera appelé pour les méthodes GET et
+POST.
+{% highlight js %}
+//Express 4.0
+app.route('/utilisateurs')
+  .all(function(req, res, next) {
+    // ce code sera exécute pour tous les appels
+  })
+  .get(function(req, res, next) {})
+  .post(function(req, res, next) {})
+{% endhighlight %}
+
+On peut d'ailleurs utiliser _Route_ pour faire un routeur indépendant :
+{% highlight js %}
+//Création des Routes
+var utilisateurs = express.Route();
+utilisateurs.get('/nouveau',function(req, res, next) {});
+utilisateurs.get('/admins',function(req, res, next) {});
+
+//Utilisation du routeur
+app.use('/utilisateurs', utilisateurs);
+{% endhighlight %}
+
+Dans cet exemple, on peut utiliser les routes _/utilisateurs/nouveau_ et _/utilisateurs/nouveau_ pour accéder aux
+fonctions qui ont été définies dans les routes.
 
 ##### express.createServer()
 
-##### API de routage
+Il n'était plus recommandé d'utiliser cette méthode depuis un moment. Elle a définitivement disparu et il faudrait
+maintenant utiliser _express()_.
 
 ##### Performances 
 
-Il y a pour l'instant peut de projet qui utilisent la nouvelle version d'Express en production. La
-société SSP à fait le test sur leurs serveurs et ils expliquent dans <a
+Il y a pour l'instant peut de projet qui utilisent la nouvelle version d'Express en production. La société SSP à fait le
+test sur leurs serveurs et ils expliquent dans <a
 href="http://tech.secretsaucepartners.com/express-4-tested-in-production/" target="_blank">un article</a> que depuis le
-passage à Express 4.0, les temps de réponses ont baissés de 20% et que la consomation de mémoire sur les serveurs a
+passage à Express 4.0, les temps de réponses ont baissés de 20% et que la consommation de mémoire sur les serveurs a
 diminué de 10%.
 
-##### Conclusion
+##### En conclusion
 
 Le passage à Express 4.0 est relativement simple. Il est donc intéressant de migrer rien que pour les gains de
 performance apporté par cette nouvelle version.
