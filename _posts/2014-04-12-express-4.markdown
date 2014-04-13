@@ -79,14 +79,14 @@ On peut d'ailleurs utiliser _Route_ pour faire un routeur indépendant :
 {% highlight js %}
 //Création des Routes
 var utilisateurs = express.Route();
-utilisateurs.get('/nouveau',function(req, res, next) {});
+utilisateurs.get('/nouveaux',function(req, res, next) {});
 utilisateurs.get('/admins',function(req, res, next) {});
 
 //Utilisation du routeur
 app.use('/utilisateurs', utilisateurs);
 {% endhighlight %}
 
-Dans cet exemple, on peut utiliser les routes _/utilisateurs/nouveau_ et _/utilisateurs/nouveau_ pour accéder aux
+Dans cet exemple, on peut utiliser les routes _/utilisateurs/nouveaux_ et _/utilisateurs/admins_ pour accéder aux
 fonctions qui ont été définies dans les routes.
 
 ##### express.createServer()
