@@ -39,7 +39,8 @@ maintenant utiliser des _if_ ou un module externe :
 {% highlight js %}
 //Express 4.0
 var env = process.env.NODE_ENV || 'development';
-if ('development' == env) {
+if ('development' ===
+ env) {
    // configuration
 }
 {% endhighlight %}

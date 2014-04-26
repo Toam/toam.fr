@@ -12,8 +12,10 @@ Le but de ce guide est de vous accompagner dans la mise en place d'un blog grâc
 Plus besoin de passer du temps à optimiser Wordpress avec des plugins de cache, tout est caché ici par définition. Il y a beaucoup d'avantages à avoir un blog sous Jekyll : les performances sont imbattables et vous pourrez passer pour un vrai hipster ! En bonus vous n'aurez aucun souci de sécurité, une plus grande liberté d'hébergement et bien plus encore...
 
 <!--more-->
+
 ##### Installation de Jekyll
-La première étape est d'installer la gem **Jekyll**. Cela suppose que **Ruby** et **RubyGems** soient installés sur votre système.
+
+La première étape est d'installer la gem **Jekyll**. Cela suppose que **Ruby** et **RubyGems** soient installés sur votre système (vous pouvez suivre ce guide : <a href="https://www.ruby-lang.org/fr/downloads/" target="_blank">https://www.ruby-lang.org/fr/downloads/</a>).
 {% highlight sh %}
 $ gem install jekyll
 {% endhighlight %}
