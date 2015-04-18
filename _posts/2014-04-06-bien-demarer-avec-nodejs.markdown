@@ -42,7 +42,7 @@ qu'on trouve tout, mais que c'est souvent des choses en version 0.0.1
        création des réponses notamment). Une excellente introduction à Node.js
    est le tutoriel d'Express : http://expressjs.com/guide.html.
    L'équipe derrière Express est en train de préparer la version qui
-   prendra la suite d'Express, KoaJS (http://koajs.com/).
+   prendra la suite d'Express, [KoaJS](http://koajs.com/).
 
 ##### Les Frameworks
    La réactions des personnes qui découvrent node.js est souvent la même.
