@@ -40,9 +40,9 @@ qu'on trouve tout, mais que c'est souvent des choses en version 0.0.1
    Il est utilisé pour ajouter à Node.js ce qu'il faut pour créer une
    application web (au niveau de la récupération des requêtes web et de la
        création des réponses notamment). Une excellente introduction à Node.js
-   est le tutoriel d'Express : http://expressjs.com/guide.html.
+   est le tutoriel d'Express : <a href="http://expressjs.com/guide.html" target="_blank">http://expressjs.com/guide.html</a>.
    L'équipe derrière Express est en train de préparer la version qui
-   prendra la suite d'Express, [KoaJS](http://koajs.com/).
+   prendra la suite d'Express, <a href="http://koajs.com/" target="_blank">KoaJS</a>.
 
 ##### Les Frameworks
    La réactions des personnes qui découvrent node.js est souvent la même.
