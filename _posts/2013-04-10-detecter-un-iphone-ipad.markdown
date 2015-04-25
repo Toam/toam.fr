@@ -3,6 +3,7 @@ layout: post
 title:  "Détecter un iPhone / iPad"
 category: ios
 comments: true
+image: "default.jpg"
 ---
 (surtout application iPhone lancé dans un iPad)
 

@@ -4,7 +4,7 @@ layout: post
 title: "Guide de démarrage : créer un blog statique avec jekyll"
 category: jekyll
 comments: true
-
+image: "jekyll.jpg"
 ---
 
 Le but de ce guide est de vous accompagner dans la mise en place d'un blog grâce à Jekyll. Si vous n'avez jamais entendu parler de Jekyll, c'est un générateur de blog statique. Le concept est de n'avoir sur le serveur que des fichiers html. L'avantage est que tout le travail est réalisé au moment du déploiement du blog (création des pages à partir des templates, application des plugins, ...).

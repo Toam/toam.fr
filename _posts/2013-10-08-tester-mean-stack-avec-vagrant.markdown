@@ -4,6 +4,7 @@ layout: post
 title: Tester la MEAN Stack avec Vagrant
 category: node.js
 comments: true
+image: "mean.jpg"
 ---
 
 La MEAN Stack est un ensemble de technologies utilisées pour créer des applications web. Elle se compose d'AngularJS comme framework coté client, node.js pour le framework serveur et MongoDB pour la base de données. Node.js sert à créer une API sur le serveur pour manipuler les données et AngularJS est responsable de l'affichage des pages grâce à son moteur de template. 

@@ -1,65 +1,75 @@
 ---
 layout: default
-title: Blog de Toam
 ---
-{% for post in paginator.posts %}
+<div class="home">
+  {% for post in site.posts %}
 
-{% if post.category == site.citation_category_name %}
-<section class="quote">
-<p>
-{{ post.title }}
-<span class="author">{{ post.author }}</span>
-</p>
-</section>
-{% else %}
-<section>
-<div class="eight columns">
-  <h4 class="post_title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
-  <span class="post_date">{{ post.date | date: '%d/%m/%Y' }}</span>
-  <span class="post_tag"><i class="icon-tag"></i> <a href="/categories/">{{ post.category }}</a></span>
-  <p>
-    {% if post.content contains "<!--more-->" %}
-    {{ post.content | split:"<!--more-->" | first % }}
+    {% if post.category == site.citation_category_name %}
+      <div class="boxed  push-down-45">
+        <div class="meta">
+          <img class="wp-post-image" src="/assets/images/quote.jpg" alt="Blog image" width="748" height="324">
+          <q class="meta__quote">
+            {{ post.title }}
+          </q>
+          <div class="meta__container">
+            <div class="row">
+              <div class="col-xs-12  col-sm-8">&nbsp;</div>
+              <div class="col-xs-12  col-sm-4">
+                <div class="meta__comments">
+                  {{ post.author }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     {% else %}
-    {{ post.content | strip_html | truncatewords:100 }}
+      <div class="boxed  push-down-45">
+
+      <div class="meta">
+        <img class="wp-post-image" src="/images/{{ post.image }}" alt="Blog image" width="748" height="324">
+        <div class="meta__container">
+          <div class="row">
+            <div class="col-xs-12  col-sm-8">
+              <div class="meta__info">
+                <span class="meta__date"><span class="glyphicon glyphicon-calendar"></span>  &nbsp; {{ post.date | date: "%-d/%m/%Y" }}</span> 
+              </div>
+            </div>
+            <div class="col-xs-12  col-sm-4">
+              <div class="meta__comments">
+                <span class="glyphicon glyphicon-tag"></span> &nbsp; {{ post.category }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-10  col-xs-offset-1">
+          <div class="post-content--front-page">
+            <h2 class="front-page-title">
+              <a href="{{ post.url }}">{{ post.title }}</a> 
+            </h2>
+            {% if post.content contains "<!--more-->" %}
+              {{ post.content | split:"<!--more-->" | first % }}
+            {% else %}
+              {{ post.content | strip_html | truncatewords:100 }}
+            {% endif %}
+          </div>
+          <a href="{{ post.url }}">
+          <div class="read-more">
+            Lire la suite
+            <div class="read-more__arrow">
+              <span class="glyphicon  glyphicon-chevron-right"></span> 
+            </div>
+          </div>
+        </a>   
+        </div>
+      </div>
+    </div>
     {% endif %}
-  </p>
-  <a href="{{ post.url }}"><button class="float_right">Lire la suite</button></a>
-</div>
-<br class="clear" />
-</section>
-{% endif %}
-{% endfor %}
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}">
-    <button class="light"><i class="icon-chevron-left"></i></button>
-  </a>
-  {% endif %}
-
-  {% if paginator.page == 1 %}
-  <button>1</button>
-  {% else %}
-  <a href="/">
-    <button class="light">1</button>
-  </a>
-  {% endif %}
-
-  {% for count in (2..paginator.total_pages) %}
-  {% if count == paginator.page %}
-  <button>{{ count }}</button>
-  {% else %}
-  <a href="/page{{ count }}">
-    <button class="light">{{ count }}</button>
-  </a>
-  {% endif %}
   {% endfor %}
 
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path }}">
-    <button class="light"><i class="icon-chevron-right"></i></button>
-  </a>
-  {% endif %}
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

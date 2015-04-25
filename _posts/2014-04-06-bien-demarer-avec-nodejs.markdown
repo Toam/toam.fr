@@ -4,6 +4,7 @@ layout: post
 title: Bien démarrer avec Node.js
 category: node.js
 comments: true
+image: "nodejs.jpg"
 ---
 
 Node.js est une technologie qui permet d'écrire du javascript coté serveur pour réaliser des applications webs. Le framework existe depuis 2009 et bien que très jeune, il attire de nombreux développeurs.

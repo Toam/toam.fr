@@ -3,6 +3,7 @@ layout: post
 title:  "Stocker une image dans le code"
 category: ios
 comments: true
+image: "default.jpg"
 ---
 Il peut être parfois intéressant d’inclure une image directement dans le code (par exemple lors de la création d’une bibliothèque statique).
 

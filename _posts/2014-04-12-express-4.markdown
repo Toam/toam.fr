@@ -4,6 +4,7 @@ layout: post
 title: "Quoi de neuf avec Express 4.0 ?"
 category: node.js
 comments: true
+image: "express4.jpg"
 ---
 
 Express est un des packets les plus connu de Node.js. C'est un framework minimaliste qui permet de construire des

@@ -4,9 +4,10 @@ layout: post
 title: "Koa, le remplaçant d'Express"
 category: node.js
 comments: true
+image: "koa.jpg"
 ---
 
-[Koa](http://koajs.com/){:target="_blank"} est un framework récent pour Node.js. Ce qui le rend particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 5.0, ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
+[Koa][1]{:target="\_blank"} est un framework récent pour Node.js. Ce qui le rend particulier est qu'il a été réalisé par les auteurs d'Express. Ces développeurs présentent d'ailleurs Koa comme Express 5.0, ils ont pourtant choisi un nouveau nom car Koa modifie en profondeur la façon dont fonctionnait Express.
 
 <!--more-->
 
@@ -36,46 +37,46 @@ Par exemple :
 
 {% highlight js %}
 function foo(x) {
-    while(true) {
-        x = x * 2;
-        yield x;
-    }
+	while(true) {
+	    x = x * 2;
+	    yield x;
+	}
 }
 {% endhighlight %}
 
 On peut ensuite appeler la méthode _foo_ pour obtenir un objet **Générateur** qui possède une méthode _next_ :
 {% highlight js %}
 var g = foo(2);
-g.next(); // -> 4
-g.next(); // -> 8
-g.next(); // -> 16
+g.next(); // -\> 4
+g.next(); // -\> 8
+g.next(); // -\> 16
 {% endhighlight %}
 
 Il est aussi possible d'utiliser la méthode _send_ :
 {% highlight js %}
 function bar(x) {
-    x++;
-    var y = yield x;
-    yield y/2;
+	x++;
+	var y = yield x;
+	yield y/2;
 }
 
 var g = bar(1);
-g.next(); // -> 2
-g.send(8); // -> 4
+g.next(); // -\> 2
+g.send(8); // -\> 4
 {% endhighlight %}
 
 Le premier _yield_ retourne x lors de l'appel de _next_. Il est ensuite possible d'appeler _send_ pour continuer l'exécution du générateur et de recevoir la valeur du second _yield_.
 
 ##### Mais à quoi ça sert ?
 
-Voici un exemple visible tiré de la [documentation](http://koajs.com/){:target="_blank"} de Koa. Lors qu'il reçoit une requête, il retourne la chaine 'Hello World' et ajoute le temps de réponse dans l'entête :
+Voici un exemple visible tiré de la [documentation][2]{:target="\_blank"} de Koa. Lors qu'il reçoit une requête, il retourne la chaine 'Hello World' et ajoute le temps de réponse dans l'entête :
 
 {% highlight js %}
 var koa = require('koa');
 var app = koa();
 
 // x-response-time
-app.use(function *(next){
+app.use(function \*(next){
   var start = new Date;
   yield next;
   var ms = new Date - start;
@@ -83,7 +84,7 @@ app.use(function *(next){
 });
 
 // logger
-app.use(function *(next){
+app.use(function \*(next){
   var start = new Date;
   yield next;
   var ms = new Date - start;
@@ -91,7 +92,7 @@ app.use(function *(next){
 });
 
 // response
-app.use(function *(){
+app.use(function \*(){
   this.body = 'Hello World';
 });
 
@@ -102,11 +103,15 @@ Dans cet exemple, lorsqu'on rencontre un _yield_ on passe au Middleware suivant.
 
 Avec Express, on passait les paramètres _req_ et _res_ à chaque fonction. On peut voir qu'ici Koa se charge de gérer un contexte global. Bien qu'il soit possible de les voir en faisant _this.req_ et _this.res_, il est déconseillé dans la documentation de travailler directement avec ces objets.
 
-##### Example
+##### Exemple
 
-Il existe pour l'instant peut d'exemple d'applicationn utilisant Koa. On peut trouver notamment cet exemple d'implémentation d'un CRUD : [https://github.com/shijuvar/Koa-CRUD](https://github.com/shijuvar/Koa-CRUD){:target="_blank"}.
+Il existe pour l'instant peut d'exemple d'applicationn utilisant Koa. On peut trouver notamment cet exemple d'implémentation d'un CRUD : [https://github.com/shijuvar/Koa-CRUD][3]{:target="\_blank"}.
 
 
 ##### Et ensuite ?
 
 Koa n'est pas encore utilisable en production, principalement parce qu'il tourne sur une version non stable de Node.js. Il faudra attendre la version 0.12 de Node.js qui permettra d'utiliser les générateurs. Il faudra ensuire voir si les plus gros Frameworks comme Sails ou Kraken vont suivre...
+
+[1]:	http://koajs.com/
+[2]:	http://koajs.com/
+[3]:	https://github.com/shijuvar/Koa-CRUD
