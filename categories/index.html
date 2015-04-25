@@ -2,27 +2,34 @@
 layout: default
 title: Categories
 ---
-<section>
-<div class="eight columns">
-  <h4>Categories</h4>
-  {% for category in site.categories %}
-  <strong>
-    <i class="icon-tag"></i>
-    {{ category | first }}
-  </strong>
-    <ul>
-      {% for posts in category %}
-        {% for post in posts %}
-          {% if post.url %}
-            <li>
-              <i class="icon-minus"></i>
-              <a href="{{ post.url }}">{{ post.title}}</a>
-            </li>
-          {% endif %}
+<div class="boxed  push-down-45">
+  
+
+
+
+<div class="row">
+  <div class="col-xs-10  col-xs-offset-1  col-md-8  col-md-offset-2  push-down-60">
+
+    <!-- Start of the content -->
+    <div class="post-content">
+      <h2>Categories</h2>
+      {% for category in site.categories %}
+      <h3>{{ category | first }}</h3>
+      <ul>
+        {% for posts in category %}
+          {% for post in posts %}
+            {% if post.url %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
         {% endfor %}
+      </ul>
       {% endfor %}
-    </ul>
-    {% endfor %}
+      
+    </div>
   </div>
-  <br class="clear">
-  </section>
+</div>
+
+</div>

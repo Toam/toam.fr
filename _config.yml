@@ -1,8 +1,13 @@
-name: Blog de Toam
-pygments: true
-paginate: 5
+title: Blog de Toam
+url: "http://thomas.brelet.net"
+baseurl: ""
+twitter_username: toam
+github_username:  toam
 permalink: /:day-:month-:year-:title
 citation_category_name: "quote"
+
+exclude: ["archive"]
+
+# Build settings
 markdown: kramdown
-prose:
-  siteurl: "http://www.toam.fr"
+highlighter: pygments

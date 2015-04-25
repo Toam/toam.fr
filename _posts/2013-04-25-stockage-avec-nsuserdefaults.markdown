@@ -4,7 +4,7 @@ layout: post
 title: Stockage avec NSUserDefaults
 category: ios
 comments: true
-
+image: "default.jpg"
 ---
 
 Il est très simple de stocker des données au sein d’une application grâce à NSUserDefaults.
