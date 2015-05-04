@@ -1,0 +1,7 @@
+.post-content--front-page img {
+	width: 400px;
+	min-height: 50px;
+    box-shadow: 1px 1px 12px #555;
+	display:block;
+	margin:auto;
+}
