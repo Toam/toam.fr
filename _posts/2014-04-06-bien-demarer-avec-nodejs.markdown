@@ -91,7 +91,7 @@ qu'on trouve tout, mais que c'est souvent des choses en version 0.0.1
    Il y a un bon tutoriel sur <a href="http://fr.openclassrooms.com/informatique/cours/des-applications-ultra-rapides-avec-node-js" target="_blank">Open Classrooms</a> qui permet de partir du bon pied dans le développement node.js.
 
 ##### Ressources en anglais
-   Un très bon tutoriel pour commencer est <a href="http://expressjs.com/guide.html" target="_blank">celui d'Express</a>. Il couvre les bases de ce module qui est utilisé dans quasiment tous les frameworks.
+   Un très bon tutoriel pour commencer est le Getting Started sur le <a href="http://expressjs.com" target="_blank">site d'Express</a>. Il couvre les bases de ce module qui est utilisé dans quasiment tous les frameworks.
 
    Il y a aussi un cours interactif sur <a href="http://node.codeschool.com/" target="_blank">CodeSchool</a> qui couvre des concepts important à maitriser. 
 
